@@ -56,7 +56,7 @@ namespace firstlab.Controllers
             var dbPerson = db.Persons.FirstOrDefault(p => p.Id == personId);
             if (dbPerson != null)
             {
-                if (person == null || person.Name == null || person.Age == null)
+                if (person == null)
                 {
                     return BadRequest("Invalid data");
                 }
