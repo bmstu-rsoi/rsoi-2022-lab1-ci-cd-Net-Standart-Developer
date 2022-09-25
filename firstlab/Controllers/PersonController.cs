@@ -50,6 +50,9 @@ namespace firstlab.Controllers
         [HttpPatch("{personId}")]
         public IActionResult UpdatePerson(int personId, Person person)
         {
+            Console.WriteLine("Id " + personId);
+            Console.WriteLine("Data " + person.Id + " " + person.Name + " " + person.Age + " " + person.Work + " " + person.Address);
+
             var dbPerson = db.Persons.FirstOrDefault(p => p.Id == personId);
             if (dbPerson != null)
             {
