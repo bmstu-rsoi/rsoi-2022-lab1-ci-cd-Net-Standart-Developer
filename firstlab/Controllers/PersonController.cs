@@ -65,7 +65,7 @@ namespace firstlab.Controllers
 
                 db.SaveChanges();
 
-                return Ok("all is ok");
+                return Ok(dbPerson);
             }
 
             return NotFound(personId);
