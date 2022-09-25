@@ -55,7 +55,7 @@ namespace firstlab.Controllers
             {
                 if (person == null)
                 {
-                    return BadRequest(null);
+                    return BadRequest();
                 }
 
                 dbPerson.Name = person.Name;
@@ -68,7 +68,7 @@ namespace firstlab.Controllers
                 return Ok(dbPerson);
             }
 
-            return NotFound(personId);
+            return NotFound();
         }
 
         [HttpDelete("{personId}")]
