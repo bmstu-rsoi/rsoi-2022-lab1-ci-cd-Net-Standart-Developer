@@ -65,10 +65,10 @@ namespace firstlab.Controllers
 
                 db.SaveChanges();
 
-                return Ok();
+                return Ok(dbPerson);
             }
-
-            return NotFound();
+            return Ok();
+            //return NotFound(personId);
         }
 
         [HttpDelete("{personId}")]
