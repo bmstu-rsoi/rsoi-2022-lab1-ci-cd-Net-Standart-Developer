@@ -13,7 +13,7 @@ namespace firstlab.Controllers
         public PersonController(DB db)
         {
             this.db = db;
-            Console.WriteLine(Environment.GetEnvironmentVariable("$PORT"));
+            Console.WriteLine("Current Port is " + Environment.GetEnvironmentVariable("PORT"));
         }
 
         [HttpGet]
