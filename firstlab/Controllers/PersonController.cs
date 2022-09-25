@@ -55,7 +55,7 @@ namespace firstlab.Controllers
             {
                 if (person == null)
                 {
-                    return BadRequest("invelid data");
+                    return BadRequest(null);
                 }
 
                 dbPerson.Name = person.Name;
