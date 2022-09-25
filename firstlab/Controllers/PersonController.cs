@@ -50,16 +50,12 @@ namespace firstlab.Controllers
         [HttpPatch("{personId}")]
         public IActionResult UpdatePerson(int personId, Person person)
         {
-            if(personId == null)
-            {
-                return BadRequest(null);
-            }
             var dbPerson = db.Persons.FirstOrDefault(p => p.Id == personId);
             if (dbPerson != null)
             {
-                if (person == null)
+                if (person == null || person.Name == null || person.Age == null)
                 {
-                    return BadRequest(null);
+                    return BadRequest("Invalid data");
                 }
 
                 dbPerson.Name = person.Name;
@@ -71,7 +67,7 @@ namespace firstlab.Controllers
 
                 return Ok(dbPerson);
             }
-            return NotFound(null);
+            return NotFound("Not found person by id");
         }
 
         [HttpDelete("{personId}")]
