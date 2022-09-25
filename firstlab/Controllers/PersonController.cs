@@ -55,7 +55,7 @@ namespace firstlab.Controllers
             {
                 if (person == null)
                 {
-                    return BadRequest("Invalid data");
+                    return BadRequest("invelid data");
                 }
 
                 dbPerson.Name = person.Name;
@@ -65,7 +65,7 @@ namespace firstlab.Controllers
 
                 db.SaveChanges();
 
-                return Ok();
+                return Ok("all is ok");
             }
 
             return NotFound(personId);
