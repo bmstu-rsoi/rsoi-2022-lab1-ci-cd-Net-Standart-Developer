@@ -30,6 +30,15 @@ jobs:
         run: |
           heroku container:push web -a $APP_NAME
           heroku container:release web -a $APP_NAME
+        
+      - name: Run API Tests
+        id: run-newman
+        uses: anthonyvscode/newman-action@v1
+        with:
+          collection: postman/[inst] Lab1.postman_collection.json
+          environment: postman/[inst][heroku] Lab1.postman_environment.json
+          delayRequest: 100
+          reporters: cli
 
       - name: Github auto grader mark
         uses: Romanow/google-sheet-autograder-marker@v1.0
