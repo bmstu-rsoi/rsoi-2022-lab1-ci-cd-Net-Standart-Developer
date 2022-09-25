@@ -53,10 +53,10 @@ namespace firstlab.Controllers
             var dbPerson = db.Persons.FirstOrDefault(p => p.Id == personId);
             if (dbPerson != null)
             {
-                if (person == null)
-                {
-                    return BadRequest();
-                }
+                //if (person == null)
+                //{
+                //    return BadRequest();
+                //}
 
                 dbPerson.Name = person.Name;
                 dbPerson.Age = person.Age;
@@ -65,7 +65,7 @@ namespace firstlab.Controllers
 
                 db.SaveChanges();
 
-                return Ok(dbPerson);
+                return Ok();
             }
 
             return NotFound();
