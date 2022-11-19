@@ -12,7 +12,7 @@
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=ec2-44-207-253-50.compute-1.amazonaws.com;Port=5432;Database=d93fsgtjvb8mhk;Username=sjhddzjabbauqx;Password=bb6f83ffedf446505e75867d9fdb3ea394b341d143ca284e7fcdbbba32a1ce13");
+            optionsBuilder.UseNpgsql("Host=ec2-44-207-133-100.compute-1.amazonaws.com;Port=5432;Database=db8qdjfjmmm786;Username=rkbinbvglsjdly;Password=b8ef7c98a29d2f0d4f4f1ce65ec960d2f07e64dca5bc435ff6a94a169022fb33");
         }
     }
 }
